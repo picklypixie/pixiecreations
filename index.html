@@ -1,233 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixieFits - Your Personal Style & Beauty Assistant</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fef8f8; /* Soft, warm background */
-        }
-        .font-heading {
-            font-family: 'Playfair Display', serif;
-        }
-        .text-soft-pink {
-            color: #ff99a4;
-        }
-        .bg-soft-pink {
-            background-color: #ffe6e8;
-        }
-        .text-warm-brown {
-            color: #6a4a40;
-        }
-        .btn-primary {
-            background-color: #ff708d;
-            color: white;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        .card-shadow {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixieFits - Your Personal Style & Beauty Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- ✅ Glossier 감성 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #fef8f8;
+      color: #4a3c35;
+    }
+    .font-heading {
+      font-family: 'Playfair Display', serif;
+    }
+    .text-soft-pink { color: #ff9aa2; }
+    .bg-soft-pink { background-color: #ffe6e8; }
+    .text-warm-brown { color: #6a4a40; }
+    .btn-primary {
+      background-color: #ff8fa3;
+      color: white;
+      transition: all 0.25s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .card-shadow {
+      box-shadow: 0 8px 14px rgba(0,0,0,0.08);
+    }
+  </style>
+
+  <!-- ✅ EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("YOUR_PUBLIC_KEY_HERE"); // 🔑 EmailJS Public Key 입력
+    })();
+  </script>
 </head>
+
 <body class="text-gray-800">
 
-    <!-- Header & Navigation -->
-    <header class="bg-white bg-opacity-70 backdrop-blur-md sticky top-0 z-50 rounded-b-3xl m-4 p-4 flex justify-between items-center transition-all duration-300 card-shadow">
-        <img src="./B5D36C5B-897D-4A53-BDED-8830CCE5564F 2.jpg" alt="PixieFits Logo" class="h-8 md:h-10">
-        <nav class="space-x-4 hidden md:block">
-            <a href="#about" class="hover:text-soft-pink transition-colors text-warm-brown">About</a>
-            <a href="#features" class="hover:text-soft-pink transition-colors text-warm-brown">Features</a>
-            <a href="#screenshots" class="hover:text-soft-pink transition-colors text-warm-brown">Screenshots</a>
-            <a href="#contact" class="hover:text-soft-pink transition-colors text-warm-brown">Contact</a>
-        </nav>
-        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-warm-brown hover:bg-soft-pink transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+  <!-- Header -->
+  <header class="bg-white bg-opacity-70 backdrop-blur-md sticky top-0 z-50 rounded-b-3xl m-4 p-4 flex justify-between items-center card-shadow">
+    <img src="./pixiefits-logo.png" alt="PixieFits Logo" class="h-9 md:h-10" />
+    <nav class="space-x-4 hidden md:block">
+      <a href="#about" class="hover:text-soft-pink text-warm-brown">About</a>
+      <a href="#features" class="hover:text-soft-pink text-warm-brown">Features</a>
+      <a href="#contact" class="hover:text-soft-pink text-warm-brown">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+
+    <!-- Hero -->
+    <section id="hero" class="text-center py-20">
+      <h2 class="text-5xl md:text-6xl font-heading font-semibold text-warm-brown mb-6">
+        PixieFits: Your Personal Style & Beauty Assistant
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+        The iOS app that helps you find your perfect fit — for your body, your skin, and your style.
+      </p>
+      <a href="#contact" class="btn-primary py-3 px-6 rounded-full inline-block font-semibold card-shadow">
+        Contact Us
+      </a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16">
+      <h3 class="text-3xl md:text-4xl font-heading text-center text-warm-brown mb-6">About PixieFits</h3>
+      <p class="text-lg text-center leading-relaxed max-w-3xl mx-auto">
+        PixieFits redefines fashion and skincare through AI personalization.  
+        Our app uses advanced fit analysis and beauty intelligence to recommend styles and skincare that truly match you.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16 text-center">
+      <h3 class="text-3xl md:text-4xl font-heading text-warm-brown mb-6">Get in Touch</h3>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+        Want to collaborate or learn more about PixieFits? Feel free to reach out anytime 💌
+      </p>
+
+      <form id="contact-form" class="max-w-xl mx-auto space-y-4">
+        <input type="text" id="name" placeholder="Your Name" class="w-full p-3 rounded-lg border-2 border-gray-200 focus:border-soft-pink" required>
+        <input type="email" id="email" placeholder="Your Email" class="w-full p-3 rounded-lg border-2 border-gray-200 focus:border-soft-pink" required>
+        <textarea id="message" rows="4" placeholder="Your Message" class="w-full p-3 rounded-lg border-2 border-gray-200 focus:border-soft-pink" required></textarea>
+        <button type="submit" class="btn-primary py-3 px-8 rounded-full font-semibold card-shadow">
+          Send Message
         </button>
-    </header>
+      </form>
 
-    <!-- Mobile menu dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-90 z-40 transition-transform transform -translate-x-full">
-        <div class="flex justify-end p-4">
-            <button id="close-menu-button" class="text-warm-brown p-2 rounded-lg hover:bg-soft-pink">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        <nav class="flex flex-col items-center justify-center space-y-8 text-xl font-medium">
-            <a href="#about" class="hover:text-soft-pink transition-colors" onclick="closeMenu()">About</a>
-            <a href="#features" class="hover:text-soft-pink transition-colors" onclick="closeMenu()">Features</a>
-            <a href="#screenshots" class="hover:text-soft-pink transition-colors" onclick="closeMenu()">Screenshots</a>
-            <a href="#contact" class="hover:text-soft-pink transition-colors" onclick="closeMenu()">Contact</a>
-        </nav>
-    </div>
+      <p id="status" class="mt-4 text-sm font-medium text-warm-brown"></p>
+    </section>
+  </main>
 
-    <main class="container mx-auto px-4 py-8">
+  <footer class="text-center py-8 text-gray-500">
+    <p>&copy; 2025 PixieFits. All rights reserved.</p>
+  </footer>
 
-        <!-- Hero Section -->
-        <section id="hero" class="text-center py-20 px-4">
-            <h2 class="text-4xl md:text-6xl font-extrabold font-heading text-warm-brown leading-tight mb-4">
-                PixieFits: Your Personal Style & Beauty Assistant
-            </h2>
-            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-                The iOS app that helps you find your perfect fit—for your body, your skin, and your style.
-            </p>
-            <p>Impact-Site-Verification: 3cc0ee95-e8ab-45be-8e03-2dc9c6e5bca0</p>
-            <a href="#features" class="btn-primary py-3 px-6 rounded-full inline-block font-semibold card-shadow hover:shadow-lg transition-all">
-                Learn More
-            </a>
-        </section>
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    const statusText = document.getElementById("status");
 
-        <!-- About Section -->
-        <section id="about" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16">
-            <h3 class="text-3xl md:text-4xl font-bold font-heading text-center text-warm-brown mb-6">About the Project</h3>
-            <p class="text-lg text-center leading-relaxed max-w-3xl mx-auto">
-                PixieFits is designed to revolutionize the way people shop for clothing and skincare. By analyzing your unique body and skin profile, we provide personalized recommendations and insights. The app goes beyond simple measurements, offering a vibrant community and curated content to empower users to express themselves with confidence.
-            </p>
-        </section>
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault();
 
-        <!-- Features Section -->
-        <section id="features" class="my-16">
-            <h3 class="text-3xl md:text-4xl font-bold font-heading text-center text-warm-brown mb-12">Key Features</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Personalized Analysis Card -->
-                <div class="bg-white p-8 rounded-3xl card-shadow text-center">
-                    <svg class="w-16 h-16 mx-auto mb-4 text-warm-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.083 12.083 0 005.657 8.49a12.083 12.083 0 018.618 3.04A12.083 12.083 0 0018.343 8.49c1.026-.641 2.087-.978 3.093-1.092a12.083 12.083 0 001.092-3.093A11.955 11.955 0 0012 2.944z"></path>
-                    </svg>
-                    <h4 class="text-xl font-semibold mb-2 text-warm-brown">Personalized Analysis</h4>
-                    <p class="text-gray-600">
-                        Receive a detailed analysis of your body and skin profile to get tailored clothing and skincare recommendations. Our technology considers specific sizing and product compositions for the perfect match.
-                    </p>
-                </div>
+      const templateParams = {
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+      };
 
-                <!-- Community Card -->
-                <div class="bg-white p-8 rounded-3xl card-shadow text-center">
-                    <svg class="w-16 h-16 mx-auto mb-4 text-warm-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H5V2a3 3 0 013-3h.003c.516 0 1.02.049 1.512.146M12 10a5 5 0 00-5 5v2m12 0a5 5 0 01-5-5M9 10a5 5 0 00-5-5v2a3 3 0 013 3"></path>
-                    </svg>
-                    <h4 class="text-xl font-semibold mb-2 text-warm-brown">Community Sharing</h4>
-                    <p class="text-gray-600">
-                        Connect with "PixieGirls" in our community to share outfit ideas, discover new styles, and get inspiration from others with similar body types and preferences.
-                    </p>
-                </div>
-
-                <!-- Trip Packing Card -->
-                <div class="bg-white p-8 rounded-3xl card-shadow text-center">
-                    <svg class="w-16 h-16 mx-auto mb-4 text-warm-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.484 9.387 5 8 5a4 4 0 100 8h2.167M12 6.253c2.678-1.574 4-4.832 4-7.917h.003c.516 0 1.02.049 1.512.146M12 6.253v13c2.678 1.574 4 4.832 4 7.917h.003c.516 0 1.02.049 1.512.146M12 6.253zM10.167 13h2.166a4 4 0 110-8h-2.166a4 4 0 110-8M12 21.087V7.087"></path>
-                    </svg>
-                    <h4 class="text-xl font-semibold mb-2 text-warm-brown">Trip Packing Assistant</h4>
-                    <p class="text-gray-600">
-                        Planning a trip? The app helps you curate the perfect wardrobe for your destination by considering the weather, activities, and duration of your visit.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Screenshots Section -->
-        <section id="screenshots" class="my-16">
-            <h3 class="text-3xl md:text-4xl font-bold font-heading text-center text-warm-brown mb-12">App Screenshots</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- 이미지 경로를 GitHub 저장소의 상대 경로로 수정했습니다. -->
-                <img src="./IMG_1289.jpg" alt="App screenshot showing body profile analysis screen." class="w-full h-auto object-cover rounded-2xl card-shadow transition-transform transform hover:scale-105">
-                <img src="./IMG_1290.jpg" alt="App screenshot showing skin profile analysis screen." class="w-full h-auto object-cover rounded-2xl card-shadow transition-transform transform hover:scale-105">
-                <img src="./IMG_1294.jpg" alt="App screenshot showing the community outfit feed." class="w-full h-auto object-cover rounded-2xl card-shadow transition-transform transform hover:scale-105">
-                <img src="./IMG_1293.jpg" alt="App screenshot showing the trip packing list feature." class="w-full h-auto object-cover rounded-2xl card-shadow transition-transform transform hover:scale-105">
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16 text-center">
-            <h3 class="text-3xl md:text-4xl font-bold font-heading text-warm-brown mb-6">Get In Touch</h3>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                Want to learn more about PixieFits? Feel free to reach out.
-            </p>
-            <form id="contact-form" class="max-w-xl mx-auto space-y-4">
-                <input type="text" id="name" placeholder="Your Name" class="w-full p-3 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-soft-pink transition-colors">
-                <input type="email" id="email" placeholder="Your Email" class="w-full p-3 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-soft-pink transition-colors">
-                <textarea id="message" rows="4" placeholder="Your Message" class="w-full p-3 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-soft-pink transition-colors"></textarea>
-                <button type="submit" class="btn-primary py-3 px-8 rounded-full font-semibold card-shadow hover:shadow-lg transition-all">
-                    Send Message
-                </button>
-            </form>
-            <!-- Confirmation Message Box -->
-            <div id="message-box" class="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-lg shadow-xl text-center border-4 border-soft-pink z-[100] transition-transform scale-95 duration-300">
-                <p id="message-content" class="text-xl font-semibold text-gray-800 mb-4"></p>
-                <button onclick="closeMessageBox()" class="bg-soft-pink text-white py-2 px-6 rounded-full font-semibold">OK</button>
-            </div>
-            <!-- Overlay for message box -->
-            <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50"></div>
-        </section>
-
-    </main>
-
-    <footer class="text-center py-8 text-gray-500">
-        <p>&copy; 2024 PixieFits. All rights reserved.</p>
-    </footer>
-
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMenuButton = document.getElementById('close-menu-button');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            setTimeout(() => {
-                mobileMenu.classList.remove('-translate-x-full');
-            }, 10);
+      emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+        .then(function() {
+          statusText.textContent = "✅ Your message has been sent!";
+          contactForm.reset();
+        }, function(error) {
+          statusText.textContent = "❌ Something went wrong. Please try again.";
+          console.error("EmailJS error:", error);
         });
-
-        closeMenuButton.addEventListener('click', closeMenu);
-
-        function closeMenu() {
-            mobileMenu.classList.add('-translate-x-full');
-            setTimeout(() => {
-                mobileMenu.classList.add('hidden');
-            }, 300);
-        }
-
-        const contactForm = document.getElementById('contact-form');
-        const messageBox = document.getElementById('message-box');
-        const messageContent = document.getElementById('message-content');
-        const overlay = document.getElementById('overlay');
-
-        contactForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            if (name && email && message) {
-                showMessageBox("Thank you, your message has been sent!");
-                contactForm.reset();
-            } else {
-                showMessageBox("Please fill in all fields to send your message.");
-            }
-        });
-
-        function showMessageBox(message) {
-            messageContent.textContent = message;
-            messageBox.classList.remove('hidden');
-            overlay.classList.remove('hidden');
-            setTimeout(() => {
-                messageBox.classList.add('scale-100');
-            }, 10);
-        }
-
-        function closeMessageBox() {
-            messageBox.classList.remove('scale-100');
-            setTimeout(() => {
-                messageBox.classList.add('hidden');
-                overlay.classList.add('hidden');
-            }, 300);
-        }
-    </script>
+    });
+  </script>
 </body>
 </html>
+
