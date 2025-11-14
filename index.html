@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PixieFits - Your Personal Style & Beauty Assistant</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- ✅ Glossier 감성 폰트 -->
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -34,31 +35,31 @@
     }
   </style>
 
-  <!-- ✅ EmailJS -->
+  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
     (function(){
-      emailjs.init("YOUR_PUBLIC_KEY_HERE"); // 🔑 EmailJS Public Key 입력
+      emailjs.init("YOUR_PUBLIC_KEY_HERE");
     })();
   </script>
 </head>
 
 <body class="text-gray-800">
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header class="bg-white bg-opacity-70 backdrop-blur-md sticky top-0 z-50 rounded-b-3xl m-4 p-4 flex justify-between items-center card-shadow">
-    <!-- ✅ 로고 교체 완료 -->
     <img src="./pixiefits.jpg" alt="PixieFits Logo" class="h-9 md:h-10 rounded-lg shadow-sm" />
     <nav class="space-x-4 hidden md:block">
       <a href="#about" class="hover:text-soft-pink text-warm-brown">About</a>
-      <a href="#features" class="hover:text-soft-pink text-warm-brown">Features</a>
+      <a href="#privacy" class="hover:text-soft-pink text-warm-brown">Privacy</a>
       <a href="#contact" class="hover:text-soft-pink text-warm-brown">Contact</a>
     </nav>
   </header>
 
+  <!-- MAIN -->
   <main class="container mx-auto px-4 py-8">
 
-    <!-- Hero -->
+    <!-- HERO -->
     <section id="hero" class="text-center py-20">
       <h2 class="text-5xl md:text-6xl font-heading font-semibold text-warm-brown mb-6">
         PixieFits: Your Personal Style & Beauty Assistant
@@ -71,23 +72,117 @@
       </a>
     </section>
 
-    <!-- About -->
+    <!-- ABOUT -->
     <section id="about" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16">
       <h3 class="text-3xl md:text-4xl font-heading text-center text-warm-brown mb-6">About PixieFits</h3>
       <p class="text-lg text-center leading-relaxed max-w-3xl mx-auto">
-        PixieFits redefines fashion and skincare through AI personalization.  
-        Our app uses advanced fit analysis and beauty intelligence to recommend styles and skincare that truly match you.
+        PixieFits uses advanced body analysis and AI-driven fashion intelligence to help you find clothing and skincare that truly match your unique proportions and needs.
       </p>
     </section>
 
-    <!-- ✅ Company Info section -->
+    <!-- PRIVACY POLICY (FULL VERSION) -->
+    <section id="privacy" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16">
+      <h3 class="text-3xl md:text-4xl font-heading text-center text-warm-brown mb-6">
+        Privacy Policy
+      </h3>
+
+      <div class="text-gray-700 space-y-4 max-w-3xl mx-auto leading-relaxed">
+
+        <p><strong>Last Updated:</strong> January 2025</p>
+
+        <p>
+          PixieFits (“we”, “our”, “us”) is committed to protecting your privacy. 
+          This Privacy Policy explains how we collect, use, and safeguard your information when you use the PixieFits iOS application.
+        </p>
+
+        <h4 class="text-2xl font-heading text-warm-brown mt-6">1. Information We Collect</h4>
+
+        <ul class="list-disc ml-6 space-y-2">
+          <li><strong>Email Address:</strong> Used for login, authentication, and account management.</li>
+          <li><strong>User-Uploaded Photos:</strong> Outfit photos, body photos for AI analysis, and clothing label images for OCR measurement extraction.</li>
+          <li><strong>User-Generated Content:</strong> Comments, likes, saved outfits, and posts in the community feed.</li>
+          <li><strong>Anonymous Usage Data:</strong> Crash logs, device information, and interactions used to improve app performance.</li>
+        </ul>
+
+        <h4 class="text-2xl font-heading text-warm-brown mt-6">2. How We Use Your Information</h4>
+
+        <ul class="list-disc ml-6 space-y-2">
+          <li>Account login and authentication</li>
+          <li>AI fit analysis & measurement recommendations</li>
+          <li>Displaying outfit feed content</li>
+          <li>Improving performance, stability, and user experience</li>
+          <li>Responding to support requests</li>
+        </ul>
+
+        <p class="mt-4">
+          Your information is <strong>not</strong> used for:
+        </p>
+
+        <ul class="list-disc ml-6 space-y-2">
+          <li>Third-party advertising</li>
+          <li>Tracking across apps or websites</li>
+          <li>Selling or sharing data with external companies</li>
+        </ul>
+
+        <h4 class="text-2xl font-heading text-warm-brown mt-6">3. Data Storage & Security</h4>
+
+        <p>
+          PixieFits uses <strong>Google Firebase</strong> for secure cloud storage, including encrypted Firestore databases and secure Storage buckets.  
+          Data is protected through standard industry practices, including HTTPS encryption and authentication rules.
+        </p>
+
+        <h4 class="text-2xl font-heading text-warm-brown mt-6">4. Sharing of Information</h4>
+
+        <p>
+          We do not sell, rent, or share your personal information with any third-party organizations.  
+          Data is only used internally to support PixieFits features and improvements.
+        </p>
+
+        <h4 class="text-2xl font-heading text-warm-brown mt-6">5. Your Rights & Choices</h4>
+
+        <p>You may request:</p>
+        <ul class="list-disc ml-6 space-y-2">
+          <li>Access to your personal data</li>
+          <li>Correction of inaccurate information</li>
+          <li>Complete deletion of your account and data</li>
+        </ul>
+
+        <p class="mt-4">
+          To request deletion or updates, contact:  
+          <strong>picklyrecipes@gmail.com</strong>
+        </p>
+
+        <h4 class="text-2xl font-heading text-warm-brown mt-6">6. Children’s Privacy</h4>
+
+        <p>
+          PixieFits is not intended for children under age 13, and we do not knowingly collect data from children under this age.
+        </p>
+
+        <h4 class="text-2xl font-heading text-warm-brown mt-6">7. Policy Changes</h4>
+
+        <p>
+          We may update this Privacy Policy from time to time. Significant updates will be communicated within the app.
+        </p>
+
+        <h4 class="text-2xl font-heading text-warm-brown mt-6">8. Contact Us</h4>
+
+        <p>
+          If you have any questions about this Privacy Policy, please contact us at:<br>
+          <strong>picklyrecipes@gmail.com</strong><br>
+          Pickly Co., Ltd., Seoul, South Korea
+        </p>
+
+      </div>
+    </section>
+
+    <!-- COMPANY INFO -->
     <section id="company-info" class="text-center py-8">
       <p class="text-lg text-warm-brown mb-2 font-semibold">AI-powered fashion and fit recommendation app.</p>
       <p class="text-gray-700 mb-1">📧 picklyrecipes@gmail.com</p>
       <p class="text-gray-500">&copy; Pickly Co., Ltd. 2025</p>
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16 text-center">
       <h3 class="text-3xl md:text-4xl font-heading text-warm-brown mb-6">Get in Touch</h3>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
@@ -105,8 +200,10 @@
 
       <p id="status" class="mt-4 text-sm font-medium text-warm-brown"></p>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="text-center py-8 text-gray-500">
     <p>&copy; 2025 PixieFits. All rights reserved.</p>
   </footer>
@@ -134,5 +231,6 @@
         });
     });
   </script>
+
 </body>
 </html>
