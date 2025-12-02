@@ -34,14 +34,6 @@
       box-shadow: 0 8px 14px rgba(0,0,0,0.08);
     }
   </style>
-
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("YOUR_PUBLIC_KEY_HERE");
-    })();
-  </script>
 </head>
 
 <body class="text-gray-800">
@@ -51,8 +43,8 @@
     <img src="./pixiefits.jpg" alt="PixieFits Logo" class="h-9 md:h-10 rounded-lg shadow-sm" />
     <nav class="space-x-4 hidden md:block">
       <a href="#about" class="hover:text-soft-pink text-warm-brown">About</a>
-      <a href="#terms" class="hover:text-soft-pink text-warm-brown">Terms of Use</a>
-      <a href="#privacy" class="hover:text-soft-pink text-warm-brown">Privacy</a>
+      <a href="terms.html" class="hover:text-soft-pink text-warm-brown">Terms of Use</a>
+      <a href="privacy.html" class="hover:text-soft-pink text-warm-brown">Privacy</a>
       <a href="#contact" class="hover:text-soft-pink text-warm-brown">Contact</a>
     </nav>
   </header>
@@ -68,9 +60,24 @@
       <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
         The iOS app that helps you find your perfect fit — for your body, your skin, and your style.
       </p>
-      <a href="#contact" class="btn-primary py-3 px-6 rounded-full inline-block font-semibold card-shadow">
-        Contact Us
-      </a>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <!-- 🔗 GitHub Repo 버튼: 실제 주소로 변경해서 사용 -->
+        <a href="https://github.com/YOUR_GITHUB_ACCOUNT/YOUR_REPO_NAME" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="btn-primary py-3 px-6 rounded-full inline-block font-semibold card-shadow">
+          View on GitHub
+        </a>
+
+        <a href="terms.html" class="py-3 px-6 rounded-full inline-block font-semibold border border-soft-pink text-soft-pink bg-white card-shadow">
+          Terms of Use
+        </a>
+
+        <a href="privacy.html" class="py-3 px-6 rounded-full inline-block font-semibold border border-soft-pink text-soft-pink bg-white card-shadow">
+          Privacy Policy
+        </a>
+      </div>
     </section>
 
     <!-- ABOUT -->
@@ -81,216 +88,6 @@
       </p>
     </section>
 
-    <!-- TERMS OF USE / EULA -->
-    <section id="terms" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16">
-      <h3 class="text-3xl md:text-4xl font-heading text-center text-warm-brown mb-6">
-        Terms of Use (EULA)
-      </h3>
-
-      <div class="text-gray-700 space-y-4 max-w-3xl mx-auto leading-relaxed">
-
-        <p><strong>Last Updated:</strong> January 2025</p>
-
-        <p>
-          These Terms of Use (“Terms”) govern your use of the PixieFits iOS application (“App”).
-          By downloading or using PixieFits, you agree to be bound by these Terms as well as the
-          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="text-soft-pink underline" target="_blank" rel="noopener noreferrer">
-            Apple Standard End User License Agreement (EULA)
-          </a>.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">1. Subscription: PixieFits Premium</h4>
-
-        <p>
-          PixieFits offers an optional auto-renewable subscription called <strong>“PixieFits Premium”</strong>.
-          Details such as the exact price and regional availability are displayed clearly on the subscription screen within the App.
-        </p>
-
-        <ul class="list-disc ml-6 space-y-2 mt-2">
-          <li><strong>Title:</strong> PixieFits Premium</li>
-          <li><strong>Type:</strong> Auto-renewable subscription</li>
-          <li><strong>Length:</strong> Displayed in the App (for example, monthly or yearly)</li>
-          <li>
-            <strong>Price:</strong> The subscription price and, where appropriate, the price per unit (e.g., per month)
-            are shown on the purchase confirmation screen in your local currency.
-          </li>
-        </ul>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">2. Auto-Renewal & Billing</h4>
-
-        <ul class="list-disc ml-6 space-y-2">
-          <li>Your payment will be charged to your Apple ID account at the time of purchase.</li>
-          <li>Your subscription automatically renews at the end of each billing period unless auto-renewal is turned off at least 24 hours before the current period ends.</li>
-          <li>Your account will be charged for renewal within 24 hours prior to the end of the current period.</li>
-          <li>
-            The cost of renewal will be the same as the subscription price displayed in the App at the time of purchase, unless clearly indicated otherwise.
-          </li>
-        </ul>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">3. Managing or Canceling Your Subscription</h4>
-
-        <p>
-          You can manage or cancel your PixieFits Premium subscription at any time after purchase by going to:
-        </p>
-        <ul class="list-disc ml-6 space-y-2">
-          <li><strong>Settings &gt; [Your Name] &gt; Subscriptions</strong> on your iOS device, or</li>
-          <li>the App Store account settings on your device.</li>
-        </ul>
-        <p class="mt-2">
-          When you cancel, your subscription will remain active until the end of the current billing period.
-          Partial refunds are not provided for unused time in the current subscription period.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">4. Free Trials (If Offered)</h4>
-
-        <p>
-          From time to time, PixieFits may offer a free trial for PixieFits Premium.
-          If you subscribe during a free trial period, your Apple ID account will be charged for the subscription at the end of the trial,
-          unless you cancel at least 24 hours before the free trial period ends.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">5. Use of the App</h4>
-
-        <ul class="list-disc ml-6 space-y-2">
-          <li>You may use PixieFits for personal, non-commercial purposes only.</li>
-          <li>You agree not to reverse engineer, modify, redistribute, or resell the App.</li>
-          <li>You agree not to upload content that is unlawful, harmful, or violates the rights of others.</li>
-        </ul>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">6. User-Generated Content</h4>
-
-        <p>
-          PixieFits allows you to upload outfits, photos, and comments. You are responsible for the content you upload.
-          We may remove content that is inappropriate, abusive, or violates these Terms.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">7. Photo & Data Usage</h4>
-
-        <p>
-          Photos uploaded for <strong>body analysis, outfit styling, and label scanning (OCR)</strong> are used
-          only to provide you with in-app features such as fit analysis, style recommendations, and measurement extraction.
-          These photos are <strong>not used for advertising, not sold to third parties, and not shared outside PixieFits</strong>.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">8. Disclaimer</h4>
-
-        <p>
-          PixieFits provides style and fit recommendations as guidance only. We do not guarantee that every recommendation will fit perfectly in all cases.
-          Actual fit may vary by brand, fabric, and garment construction.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">9. Changes to These Terms</h4>
-
-        <p>
-          We may update these Terms from time to time. Any significant changes will be communicated within the App or on this page.
-          By continuing to use the App after changes are posted, you agree to the updated Terms.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">10. Contact</h4>
-
-        <p>
-          If you have any questions about these Terms of Use, please contact us at:<br>
-          <strong>picklyrecipes@gmail.com</strong><br>
-          Pickly Co., Ltd., Seoul, South Korea
-        </p>
-      </div>
-    </section>
-
-    <!-- PRIVACY POLICY (FULL VERSION) -->
-    <section id="privacy" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16">
-      <h3 class="text-3xl md:text-4xl font-heading text-center text-warm-brown mb-6">
-        Privacy Policy
-      </h3>
-
-      <div class="text-gray-700 space-y-4 max-w-3xl mx-auto leading-relaxed">
-
-        <p><strong>Last Updated:</strong> January 2025</p>
-
-        <p>
-          PixieFits (“we”, “our”, “us”) is committed to protecting your privacy. 
-          This Privacy Policy explains how we collect, use, and safeguard your information when you use the PixieFits iOS application.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">1. Information We Collect</h4>
-
-        <ul class="list-disc ml-6 space-y-2">
-          <li><strong>Email Address:</strong> Used for login, authentication, and account management.</li>
-          <li><strong>User-Uploaded Photos:</strong> Outfit photos, body photos for AI analysis, and clothing label images for OCR measurement extraction.</li>
-          <li><strong>User-Generated Content:</strong> Comments, likes, saved outfits, and posts in the community feed.</li>
-          <li><strong>Anonymous Usage Data:</strong> Crash logs, device information, and interactions used to improve app performance.</li>
-        </ul>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">2. How We Use Your Information</h4>
-
-        <ul class="list-disc ml-6 space-y-2">
-          <li>Account login and authentication</li>
-          <li>AI fit analysis & measurement recommendations</li>
-          <li>Displaying outfit feed content</li>
-          <li>Improving performance, stability, and user experience</li>
-          <li>Responding to support requests</li>
-        </ul>
-
-        <p class="mt-4">
-          Your information is <strong>not</strong> used for:
-        </p>
-
-        <ul class="list-disc ml-6 space-y-2">
-          <li>Third-party advertising</li>
-          <li>Tracking across apps or websites</li>
-          <li>Selling or sharing data with external companies</li>
-        </ul>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">3. Data Storage & Security</h4>
-
-        <p>
-          PixieFits uses <strong>Google Firebase</strong> for secure cloud storage, including encrypted Firestore databases and secure Storage buckets.  
-          Data is protected through standard industry practices, including HTTPS encryption and authentication rules.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">4. Sharing of Information</h4>
-
-        <p>
-          We do not sell, rent, or share your personal information with any third-party organizations.  
-          Data is only used internally to support PixieFits features and improvements.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">5. Your Rights & Choices</h4>
-
-        <p>You may request:</p>
-        <ul class="list-disc ml-6 space-y-2">
-          <li>Access to your personal data</li>
-          <li>Correction of inaccurate information</li>
-          <li>Complete deletion of your account and data</li>
-        </ul>
-
-        <p class="mt-4">
-          To request deletion or updates, contact:  
-          <strong>picklyrecipes@gmail.com</strong>
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">6. Children’s Privacy</h4>
-
-        <p>
-          PixieFits is not intended for children under age 13, and we do not knowingly collect data from children under this age.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">7. Policy Changes</h4>
-
-        <p>
-          We may update this Privacy Policy from time to time. Significant updates will be communicated within the app.
-        </p>
-
-        <h4 class="text-2xl font-heading text-warm-brown mt-6">8. Contact Us</h4>
-
-        <p>
-          If you have any questions about this Privacy Policy, please contact us at:<br>
-          <strong>picklyrecipes@gmail.com</strong><br>
-          Pickly Co., Ltd., Seoul, South Korea
-        </p>
-
-      </div>
-    </section>
-
     <!-- COMPANY INFO -->
     <section id="company-info" class="text-center py-8">
       <p class="text-lg text-warm-brown mb-2 font-semibold">AI-powered fashion and fit recommendation app.</p>
@@ -298,23 +95,24 @@
       <p class="text-gray-500">&copy; Pickly Co., Ltd. 2025</p>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (이메일 링크만) -->
     <section id="contact" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16 text-center">
       <h3 class="text-3xl md:text-4xl font-heading text-warm-brown mb-6">Get in Touch</h3>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-        Want to collaborate or learn more about PixieFits? Feel free to reach out anytime 💌
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+        Want to collaborate or learn more about PixieFits?  
+        Feel free to reach out anytime 💌
       </p>
 
-      <form id="contact-form" class="max-w-xl mx-auto space-y-4">
-        <input type="text" id="name" placeholder="Your Name" class="w-full p-3 rounded-lg border-2 border-gray-200 focus:border-soft-pink" required>
-        <input type="email" id="email" placeholder="Your Email" class="w-full p-3 rounded-lg border-2 border-gray-200 focus:border-soft-pink" required>
-        <textarea id="message" rows="4" placeholder="Your Message" class="w-full p-3 rounded-lg border-2 border-gray-200 focus:border-soft-pink" required></textarea>
-        <button type="submit" class="btn-primary py-3 px-8 rounded-full font-semibold card-shadow">
-          Send Message
-        </button>
-      </form>
+      <p class="text-lg font-semibold mb-4">
+        📧 
+        <a href="mailto:picklyrecipes@gmail.com" class="text-soft-pink underline">
+          picklyrecipes@gmail.com
+        </a>
+      </p>
 
-      <p id="status" class="mt-4 text-sm font-medium text-warm-brown"></p>
+      <p class="text-sm text-gray-500">
+        We typically respond within a few business days.
+      </p>
     </section>
 
   </main>
@@ -323,30 +121,6 @@
   <footer class="text-center py-8 text-gray-500">
     <p>&copy; 2025 PixieFits. All rights reserved.</p>
   </footer>
-
-  <script>
-    const contactForm = document.getElementById("contact-form");
-    const statusText = document.getElementById("status");
-
-    contactForm.addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const templateParams = {
-        from_name: document.getElementById("name").value,
-        from_email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-      };
-
-      emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
-        .then(function() {
-          statusText.textContent = "✅ Your message has been sent!";
-          contactForm.reset();
-        }, function(error) {
-          statusText.textContent = "❌ Something went wrong. Please try again.";
-          console.error("EmailJS error:", error);
-        });
-    });
-  </script>
 
 </body>
 </html>
