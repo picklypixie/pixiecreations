@@ -15,21 +15,27 @@
       background-color: #fef8f8;
       color: #4a3c35;
     }
+
     .font-heading {
       font-family: 'Playfair Display', serif;
     }
+
     .text-soft-pink { color: #ff9aa2; }
     .bg-soft-pink { background-color: #ffe6e8; }
     .text-warm-brown { color: #6a4a40; }
+    .border-soft-pink { border-color: #ffb7c0; }
+
     .btn-primary {
       background-color: #ff8fa3;
       color: white;
       transition: all 0.25s ease;
     }
+
     .btn-primary:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
+
     .card-shadow {
       box-shadow: 0 8px 14px rgba(0,0,0,0.08);
     }
@@ -41,8 +47,10 @@
   <!-- HEADER -->
   <header class="bg-white bg-opacity-70 backdrop-blur-md sticky top-0 z-50 rounded-b-3xl m-4 p-4 flex justify-between items-center card-shadow">
     <img src="./pixiefits.jpg" alt="PixieFits Logo" class="h-9 md:h-10 rounded-lg shadow-sm" />
+
     <nav class="space-x-4 hidden md:block">
       <a href="#about" class="hover:text-soft-pink text-warm-brown">About</a>
+      <a href="#difference" class="hover:text-soft-pink text-warm-brown">Why PixieFits</a>
       <a href="terms.html" class="hover:text-soft-pink text-warm-brown">Terms of Use</a>
       <a href="privacy.html" class="hover:text-soft-pink text-warm-brown">Privacy</a>
       <a href="#contact" class="hover:text-soft-pink text-warm-brown">Contact</a>
@@ -54,17 +62,17 @@
 
     <!-- HERO -->
     <section id="hero" class="text-center py-20">
-      <h2 class="text-5xl md:text-6xl font-heading font-semibold text-warm-brown mb-6">
+      <h2 class="text-5xl md:text-6xl font-heading font-semibold text-warm-brown mb-6 leading-tight">
         PixieFits: Your Personal Style & Beauty Assistant
       </h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-        The iOS app that helps you find your perfect fit — for your body, your skin, and your style.
+
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+        An iOS app designed to help you discover what truly fits your body, your skin, and your personal style — through more thoughtful, personalized, and data-informed recommendations.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <!-- 🔗 GitHub Repo 버튼: 실제 주소로 변경해서 사용 -->
-        <a href="https://github.com/YOUR_GITHUB_ACCOUNT/YOUR_REPO_NAME" 
-           target="_blank" 
+        <a href="https://github.com/YOUR_GITHUB_ACCOUNT/YOUR_REPO_NAME"
+           target="_blank"
            rel="noopener noreferrer"
            class="btn-primary py-3 px-6 rounded-full inline-block font-semibold card-shadow">
           View on GitHub
@@ -82,29 +90,117 @@
 
     <!-- ABOUT -->
     <section id="about" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16">
-      <h3 class="text-3xl md:text-4xl font-heading text-center text-warm-brown mb-6">About PixieFits</h3>
-      <p class="text-lg text-center leading-relaxed max-w-3xl mx-auto">
-        PixieFits uses advanced body analysis and AI-driven fashion intelligence to help you find clothing and skincare that truly match your unique proportions and needs.
+      <h3 class="text-3xl md:text-4xl font-heading text-center text-warm-brown mb-6">
+        About PixieFits
+      </h3>
+
+      <div class="max-w-4xl mx-auto space-y-6">
+        <p class="text-lg text-center leading-relaxed text-gray-700">
+          PixieFits is an AI-powered personal style and beauty assistant created to make shopping feel more personal, more accurate, and more helpful.
+          Instead of relying only on trends, influencer opinions, or generic size and skincare advice, PixieFits focuses on what actually works for each individual user.
+        </p>
+
+        <p class="text-lg text-center leading-relaxed text-gray-700">
+          The app brings together body-related fit support, skin profile analysis, ingredient-based skincare evaluation, and personalized recommendation logic to help users make better decisions in fashion and beauty.
+          Our goal is to turn overwhelming choices into more confident and intentional ones.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 pt-4">
+          <div class="bg-soft-pink p-6 rounded-2xl">
+            <h4 class="text-xl font-semibold text-warm-brown mb-3">Personal Fit Guidance</h4>
+            <p class="text-gray-700 leading-relaxed">
+              PixieFits helps users better understand their body proportions and personal fit needs, making it easier to choose items that feel more flattering and comfortable.
+            </p>
+          </div>
+
+          <div class="bg-soft-pink p-6 rounded-2xl">
+            <h4 class="text-xl font-semibold text-warm-brown mb-3">Skin & Beauty Analysis</h4>
+            <p class="text-gray-700 leading-relaxed">
+              Users can explore skin-related insights through profile-based analysis and receive skincare suggestions tailored to their concerns, sensitivity level, and routine preferences.
+            </p>
+          </div>
+
+          <div class="bg-soft-pink p-6 rounded-2xl">
+            <h4 class="text-xl font-semibold text-warm-brown mb-3">Ingredient-Based Product Review</h4>
+            <p class="text-gray-700 leading-relaxed">
+              PixieFits supports ingredient-focused skincare evaluation, helping users better understand compatibility before purchasing or using a product.
+            </p>
+          </div>
+
+          <div class="bg-soft-pink p-6 rounded-2xl">
+            <h4 class="text-xl font-semibold text-warm-brown mb-3">Smarter Everyday Recommendations</h4>
+            <p class="text-gray-700 leading-relaxed">
+              By combining personal inputs with recommendation logic, PixieFits aims to make everyday beauty and fashion decisions feel less confusing and more intentional.
+            </p>
+          </div>
+        </div>
+
+        <div class="pt-6">
+          <h4 class="text-2xl font-heading text-center text-warm-brown mb-4">Who PixieFits Is For</h4>
+          <p class="text-lg text-center leading-relaxed text-gray-700 max-w-3xl mx-auto">
+            PixieFits is for people who want a more thoughtful and personalized experience when choosing clothes, skincare, and beauty products — especially those who feel that one-size-fits-all advice does not reflect their real needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT MAKES PIXIEFITS DIFFERENT -->
+    <section id="difference" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16">
+      <h3 class="text-3xl md:text-4xl font-heading text-center text-warm-brown mb-6">
+        What Makes PixieFits Different
+      </h3>
+
+      <p class="text-lg text-center leading-relaxed text-gray-700 max-w-3xl mx-auto mb-10">
+        PixieFits is designed around the idea that better recommendations come from understanding the individual — not just the product.
+        It is built to support more meaningful choices by connecting personal data with practical beauty and style guidance.
       </p>
+
+      <div class="grid md:grid-cols-3 gap-6 text-center max-w-5xl mx-auto">
+        <div class="p-6 bg-[#fff6f7] rounded-2xl border border-[#f8d9de]">
+          <h4 class="text-xl font-semibold text-warm-brown mb-3">Personalized</h4>
+          <p class="text-gray-700 leading-relaxed">
+            Recommendations are centered around the user’s own body, skin, and preferences instead of generic trends or broad assumptions.
+          </p>
+        </div>
+
+        <div class="p-6 bg-[#fff6f7] rounded-2xl border border-[#f8d9de]">
+          <h4 class="text-xl font-semibold text-warm-brown mb-3">Practical</h4>
+          <p class="text-gray-700 leading-relaxed">
+            PixieFits focuses on real decisions users make every day, from selecting skincare to finding products that better align with comfort, fit, and lifestyle.
+          </p>
+        </div>
+
+        <div class="p-6 bg-[#fff6f7] rounded-2xl border border-[#f8d9de]">
+          <h4 class="text-xl font-semibold text-warm-brown mb-3">Data-Informed</h4>
+          <p class="text-gray-700 leading-relaxed">
+            The app is built around structured inputs and recommendation logic that aim to create more useful, relevant, and personalized outcomes.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- COMPANY INFO -->
     <section id="company-info" class="text-center py-8">
-      <p class="text-lg text-warm-brown mb-2 font-semibold">AI-powered fashion and fit recommendation app.</p>
+      <p class="text-lg text-warm-brown mb-2 font-semibold">
+        AI-powered fashion and fit recommendation app.
+      </p>
       <p class="text-gray-700 mb-1">📧 picklyrecipes@gmail.com</p>
       <p class="text-gray-500">&copy; Pickly Co., Ltd. 2025</p>
     </section>
 
-    <!-- CONTACT (이메일 링크만) -->
+    <!-- CONTACT -->
     <section id="contact" class="bg-white p-8 md:p-12 rounded-3xl card-shadow my-16 text-center">
-      <h3 class="text-3xl md:text-4xl font-heading text-warm-brown mb-6">Get in Touch</h3>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-        Want to collaborate or learn more about PixieFits?  
+      <h3 class="text-3xl md:text-4xl font-heading text-warm-brown mb-6">
+        Get in Touch
+      </h3>
+
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6 leading-relaxed">
+        Want to collaborate, ask a question, or learn more about PixieFits?
         Feel free to reach out anytime 💌
       </p>
 
       <p class="text-lg font-semibold mb-4">
-        📧 
+        📧
         <a href="mailto:picklyrecipes@gmail.com" class="text-soft-pink underline">
           picklyrecipes@gmail.com
         </a>
